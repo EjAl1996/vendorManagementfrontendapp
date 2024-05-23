@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState } from 'react';
+import LoginPage from './components/loginPage';
+import Dashboard from './components/Dashboard';
+import AddEmployee from './components/AddEmployee';
+import AddVendor from './components/AddVendor';
+import SendEmail from './components/sendEmail';
 
-function App() {
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userData, setUserData] = useState(null);
+
+  const handleLogin = (data) => {
+    setIsLoggedIn(true);
+    setUserData(data);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {!isLoggedIn ? (
+        <LoginPage onLogin={handleLogin} />
+      ) : (
+        <div>
+          <Dashboard />
+          {/* Include routes or conditionally render other components */}
+          {/* <AddEmployee /> */}
+          {/* <AddVendor /> */}
+          {/* <SendEmail /> */}
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;
