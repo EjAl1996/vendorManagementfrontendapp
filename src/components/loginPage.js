@@ -22,8 +22,8 @@ const LoginPage = ({ onLogin }) => {
       if (!response.ok) {
         throw new Error('Login failed');
       }
-      const data = await response.text(); // Assuming the response is plain text
-      onLogin(data); // Pass the login data to parent component
+      const data = await response.text(); 
+      onLogin(data); 
     } catch (error) {
       setError('Invalid username/password');
       console.error('Login failed:', error);

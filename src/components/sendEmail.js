@@ -20,14 +20,11 @@ const SendEmail = () => {
         throw new Error('Error sending email');
       }
 
-      // Show success toast notification
       toast.success('Email sent successfully');
 
-      // Reset form fields after successful submission
       setRecipient('');
       setSubject('');
     } catch (error) {
-      // Show error toast notification
       toast.error('Error sending email: ' + error.message);
       console.error('Error sending email:', error);
     }

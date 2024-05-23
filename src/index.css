@@ -70,7 +70,7 @@ code {
 
 .components-container {
   display: flex;
-  justify-content: space-around; /* Adjust as needed */
+  justify-content: space-around; 
   margin: 20px auto;
-  max-width: 1200px; /* Adjust as needed */
+  max-width: 1200px; 
 }

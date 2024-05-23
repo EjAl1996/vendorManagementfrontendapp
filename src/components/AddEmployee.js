@@ -32,10 +32,8 @@ const AddEmployee = () => {
       if (!response.ok) {
         throw new Error('Error adding employee');
       }
-      // Show success toast notification
       toast.success('Employee added successfully');
 
-      // Reset form fields after successful submission
       setEmployee({
         name: '',
         designation: '',
@@ -43,7 +41,6 @@ const AddEmployee = () => {
         email: ''
       });
     } catch (error) {
-      // Show error toast notification
       toast.error('Error adding employee: ' + error.message);
       console.error('Error adding employee:', error);
     }

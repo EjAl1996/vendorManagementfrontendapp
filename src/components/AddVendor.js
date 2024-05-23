@@ -24,16 +24,13 @@ const AddVendor = () => {
         throw new Error('Error adding vendor');
       }
 
-      // Show success toast notification
       toast.success('Vendor added successfully');
 
-      // Reset form fields after successful submission
       setVendor({
         name: '',
         email: ''
       });
     } catch (error) {
-      // Show error toast notification
       toast.error('Error adding vendor: ' + error.message);
       console.error('Error adding vendor:', error);
     }
