@@ -22,7 +22,6 @@ const App = () => {
       ) : (
         <div>
           <Dashboard />
-          {/* Include routes or conditionally render other components */}
           {/* <AddEmployee /> */}
           {/* <AddVendor /> */}
           {/* <SendEmail /> */}
